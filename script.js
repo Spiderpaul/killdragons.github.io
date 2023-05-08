@@ -10,7 +10,7 @@ collisionCanvas.height = window.innerHeight;
 
 let score = 0;
 let gameOver = false;
-ctx.font = '70px Impact';
+ctx.font = '50px Impact';
 
 //Variables para estandarizar el renderizado de frames.
 let timeToNexRaven = 0;
@@ -129,11 +129,6 @@ class Particle{
 function drawScore(){
     ctx.fillStyle = "black";
     ctx.fillText('Puntos: '+ score, 45, 80);
-    ctx.fillStyle = "black";
-    ctx.fillText('Puntos: '+ score, 45, 70);
-    ctx.fillText('Puntos: '+ score, 55, 80);
-    ctx.fillStyle = "black";
-    ctx.fillText('Puntos: '+ score, 55, 70);
     ctx.fillStyle = "white";
     ctx.fillText('Puntos: '+ score, 50, 75);
 }
@@ -142,12 +137,6 @@ function drawGameOver(){
     ctx.textAlign = "center";
     ctx.fillStyle = "black";
     ctx.fillText('¡FIN DEL JUEGO! Tu puntaje es: ' + score, canvas.width/2, canvas.height/2);
-    ctx.fillStyle = "black";
-    ctx.fillText('¡FIN DEL JUEGO! Tu puntaje es: ' + score, canvas.width/2+10, canvas.height/2-10);
-    ctx.fillStyle = "black";
-    ctx.fillText('¡FIN DEL JUEGO! Tu puntaje es: ' + score, canvas.width/2+10, canvas.height/2);
-    ctx.fillStyle = "black";
-    ctx.fillText('¡FIN DEL JUEGO! Tu puntaje es: ' + score, canvas.width/2, canvas.height/2-10);
     ctx.fillStyle = "white";
     ctx.fillText('¡FIN DEL JUEGO! Tu puntaje es: ' + score, canvas.width/2+5, canvas.height/2-5);
 }
