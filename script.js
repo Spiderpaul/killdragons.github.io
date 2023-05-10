@@ -10,7 +10,7 @@ collisionCanvas.height = window.innerHeight;
 
 let score = 0;
 let gameOver = false;
-ctx.font = '50px Impact';
+ctx.font = '30px Impact';
 
 //Variables para estandarizar el renderizado de frames.
 let timeToNexRaven = 0;
@@ -136,9 +136,13 @@ function drawScore(){
 function drawGameOver(){
     ctx.textAlign = "center";
     ctx.fillStyle = "black";
-    ctx.fillText('¡FIN DEL JUEGO! Tu puntaje es: ' + score, canvas.width/2, canvas.height/2);
+    ctx.fillText('¡FIN DEL JUEGO!', canvas.width/2, canvas.height/2);
     ctx.fillStyle = "white";
-    ctx.fillText('¡FIN DEL JUEGO! Tu puntaje es: ' + score, canvas.width/2+5, canvas.height/2-5);
+    ctx.fillText('¡FIN DEL JUEGO!', canvas.width/2+5, canvas.height/2-5);
+    ctx.fillStyle = "black";
+    ctx.fillText('Tu puntaje es: ' + score, canvas.width/2, canvas.height/2+30);
+    ctx.fillStyle = "white";
+    ctx.fillText('Tu puntaje es: ' + score, canvas.width/2+5, canvas.height/2+25);
 }
 
 window.addEventListener('click', function(e){
